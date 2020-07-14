@@ -37,7 +37,7 @@ public class PersonForEquals {
         // TODO: please modify the following code to pass the test
         // <--start
 //        throw new NotImplementedException();
-        if(obj instanceof PersonForEquals){
+        if (obj instanceof PersonForEquals) {
             PersonForEquals person = (PersonForEquals) obj;
             return name == person.name && yearOfBirth == person.yearOfBirth;
         }
@@ -49,7 +49,8 @@ public class PersonForEquals {
     public int hashCode() {
         // TODO: please modify the following code to pass the test
         // <--start
-        throw new NotImplementedException();
+//        throw new NotImplementedException();
+        return name.hashCode() + new Short(yearOfBirth).hashCode();
         // --end-->
     }
 }
