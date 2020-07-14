@@ -113,7 +113,7 @@ class ObjectTest {
     void should_choose_method_at_compile_time() {
         OverloadingFixture fixture = new OverloadingFixture();
 
-        String actual = fixture.methodWithOneParameter((Object)"I am a string");
+        String actual = fixture.methodWithOneParameter((Object) "I am a string");
 
         // TODO: please modify the following code to pass the test. You should write the result directly.
         // <--start
@@ -145,7 +145,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = null;
+        final String expected = "Untitled";
         // --end-->
 
         assertEquals(expected, instance.getName());
@@ -160,7 +160,11 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String[] expected = {};
+        final String[] expected = {
+                "Field Initializer",
+                "Initialization Block",
+                "Constructor with argument",
+                "Default constructor"};
         // --end-->
 
         assertArrayEquals(expected, logs);
@@ -182,7 +186,7 @@ class ObjectTest {
     @SuppressWarnings("RedundantArrayCreation")
     @Test
     void should_get_message_of_var_length_parameters_2() {
-        final String message = getMessageOfVarLengthParameters(new Object[] {1, 2, 3});
+        final String message = getMessageOfVarLengthParameters(new Object[]{1, 2, 3});
 
         // TODO: please modify the following code to pass the test
         // <--start
