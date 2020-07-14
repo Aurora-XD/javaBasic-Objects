@@ -36,7 +36,12 @@ public class PersonForEquals {
     public boolean equals(Object obj) {
         // TODO: please modify the following code to pass the test
         // <--start
-        throw new NotImplementedException();
+//        throw new NotImplementedException();
+        if(obj instanceof PersonForEquals){
+            PersonForEquals person = (PersonForEquals) obj;
+            return name == person.name && yearOfBirth == person.yearOfBirth;
+        }
+        return false;
         // --end-->
     }
 
